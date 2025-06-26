@@ -150,15 +150,17 @@ nav ul li a:hover::after{
 }
 .work-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 40px;
     margin-top: 50px;
+    height: 100%;
 }
 .work{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    
+    height: 100%;
 }
 .work img{
     width: 100%;
