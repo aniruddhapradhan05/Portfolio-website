@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    @apply bg-dark text-white overflow-x-hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold rounded-full;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-5xl font-semibold text-white relative inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply block h-1 w-16 bg-gold mt-2 rounded;
+  }
+
+  .nav-link {
+    @apply text-white text-lg relative transition-all duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 -bottom-1.5 h-0.5 w-0 bg-gold transition-all duration-500;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  .tab-btn {
+    @apply text-white text-base font-medium cursor-pointer relative pb-2 transition-all duration-300;
+  }
+
+  .tab-btn::after {
+    content: '';
+    @apply absolute left-0 bottom-0 h-0.5 w-0 bg-gold transition-all duration-500;
+  }
+
+  .tab-btn.active::after {
+    @apply w-1/2;
+  }
+
+  .btn {
+    @apply inline-block border border-gold px-12 py-3.5 rounded-md no-underline text-white font-poppins text-base cursor-pointer transition-all duration-300;
+  }
+
+  .btn:hover {
+    @apply bg-gold text-dark -translate-y-0.5;
+  }
+
+  .btn-solid {
+    @apply bg-gold text-dark border-gold;
+  }
+
+  .btn-solid:hover {
+    @apply bg-transparent text-white;
+  }
+}
