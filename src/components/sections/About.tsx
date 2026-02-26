@@ -68,7 +68,8 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-12 md:py-24 text-muted" ref={ref}>
+    <section id="about" className="py-12 md:py-24 text-muted" ref={ref}
+      itemScope itemType="https://schema.org/Person">
       <div className="px-6 md:px-[10%] max-w-[1920px] mx-auto w-full">
         <motion.div
           variants={containerVariants}
